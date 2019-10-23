@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>书架</title>
+	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+	<style type="text/css">
+       <style type="text/css">
+        .cover {
+            width: 100%;
+            height: 1000px;
+            position: relative;
+            text-align: center;
+            line-height: 300px;
+            color: #fff;
+            margin: 20px auto;
+        }
+        
+        .cover::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 650px;
+            background: transparent url(img/bg.jpg) center center no-repeat;
+            filter: blur(1px);
+            z-index: -1;
+            background-size: cover;
+        }
+    </style>
+    </style>
+</head>
+<body >
+
+<nav class="navbar navbar-default" role="navigation">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="#">书架</a>
+		</div>
+		<div>
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="http://www.cspro.top">我的博客</a></li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						CS基础
+						<b class="caret"></b>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="#">数据结构与算法</a></li>
+						<li><a href="#">计算机组成原理</a></li>
+						<li><a href="#">计算机网络</a></li>
+						<li><a href="#">软件工程</a></li>
+						<li><a href="#">操作系统</a></li>
+						<li><a href="#">离散数学</a></li>
+						<li><a href="#">编译原理</a></li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						Java框架
+						<b class="caret"></b>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="#">Spring</a></li>
+						<li><a href="#">SpringMVC</a></li>
+						<li><a href="#">SpringBoot</a></li>
+						<li><a href="#"> Spring Cloud</a></li>
+						<li><a href="#">Spring Security</a></li>
+						<li class="divider"></li>
+						<li><a href="#">Shiro</a></li>
+						<li><a href="#">Mybatis</a></li>
+						<li><a href="#">Elasticsearch</a></li>
+						<li class="divider"></li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						工具的使用
+						<b class="caret"></b>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="#">Git</a></li>
+						<li><a href="#">Node.js</a></li>
+						<li><a href="#">Nginx</a></li>
+						<li class="divider"></li>
+						<li><a href="#">JSoup</a></li>
+						<li><a href="#">Log4j</a></li>
+						<li class="divider"></li>
+						<li><a href="#">Maven</a></li>
+						<li><a href="#">SVN</a></li>
+						<li><a href="#">Elasticsearch</a></li>
+						<li class="divider"></li>
+						<li><a href="#">Eclipse</a></li>
+						<li><a href="#">IDEA</a></li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						数据库技术
+						<b class="caret"></b>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="#">MySQL/MariaDB</a></li>
+						<li><a href="#">Memcached</a></li>
+						<li><a href="#">MongoDB</a></li>
+						<li><a href="#">Redis</a></li>
+						<li><a href="#">PL/SQL</a></li>
+						<li><a href="#">SQLite</a></li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						语言
+						<b class="caret"></b>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="#">C语言教程</a></li>
+						<li><a href="#">Assembly</a></li>
+						<li><a href="#">Swift</a></li>
+						<li><a href="#">Python</a></li>
+						<li><a href="#">PHP</a></li>
+						<li><a href="#">微信小程序</a></li>
+						<li class="divider"></li>
+						<li><a href="#">TypeScript</a></li>
+						<li><a href="#">JavaScript</a></li>
+						<li><a href="#">HTML</a></li>
+						<li><a href="#">CSS</a></li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						脚本类
+						<b class="caret"></b>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="#">Shell</a></li>
+						<li><a href="#">Bat</a></li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						服务器相关
+						<b class="caret"></b>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="#">Centos/RedHat搭建服务器</a></li>
+						<li><a href="#">Windows搭建服务器</a></li>
+					</ul>
+				</li>
+				<li ><a href="#">数学基础</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+<div class="container-fluid cover">
+	<h3 style="text-align:center;color:#000;margin-top:5%">推荐书籍 </h3>
+	
+</div>
+
+</body>
+</html>
