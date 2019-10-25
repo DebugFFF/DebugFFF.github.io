@@ -1,0 +1,543 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>桶排序 · 排序算法</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="崔安兵">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-page-toc-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="res/mystyle.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="10.radixSort.html" />
+    
+    
+    <link rel="prev" href="8.countingSort.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="1.bubbleSort.html">
+            
+                <a href="1.bubbleSort.html">
+            
+                    
+                    冒泡排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="2.selectionSort.html">
+            
+                <a href="2.selectionSort.html">
+            
+                    
+                    选择排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="3.insertionSort.html">
+            
+                <a href="3.insertionSort.html">
+            
+                    
+                    插入排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="4.shellSort.html">
+            
+                <a href="4.shellSort.html">
+            
+                    
+                    希尔排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="5.mergeSort.html">
+            
+                <a href="5.mergeSort.html">
+            
+                    
+                    归并排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="6.quickSort.html">
+            
+                <a href="6.quickSort.html">
+            
+                    
+                    快速排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="7.heapSort.html">
+            
+                <a href="7.heapSort.html">
+            
+                    
+                    堆排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="8.countingSort.html">
+            
+                <a href="8.countingSort.html">
+            
+                    
+                    计数排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.10" data-path="9.bucketSort.html">
+            
+                <a href="9.bucketSort.html">
+            
+                    
+                    桶排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="10.radixSort.html">
+            
+                <a href="10.radixSort.html">
+            
+                    
+                    基数排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >桶排序</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x6876;&#x6392;&#x5E8F;">&#x6876;&#x6392;&#x5E8F;</h1>
+<p>&#x6876;&#x6392;&#x5E8F;&#x662F;&#x8BA1;&#x6570;&#x6392;&#x5E8F;&#x7684;&#x5347;&#x7EA7;&#x7248;&#x3002;&#x5B83;&#x5229;&#x7528;&#x4E86;&#x51FD;&#x6570;&#x7684;&#x6620;&#x5C04;&#x5173;&#x7CFB;&#xFF0C;&#x9AD8;&#x6548;&#x4E0E;&#x5426;&#x7684;&#x5173;&#x952E;&#x5C31;&#x5728;&#x4E8E;&#x8FD9;&#x4E2A;&#x6620;&#x5C04;&#x51FD;&#x6570;&#x7684;&#x786E;&#x5B9A;&#x3002;&#x4E3A;&#x4E86;&#x4F7F;&#x6876;&#x6392;&#x5E8F;&#x66F4;&#x52A0;&#x9AD8;&#x6548;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x505A;&#x5230;&#x8FD9;&#x4E24;&#x70B9;&#xFF1A;</p>
+<ol>
+<li>&#x5728;&#x989D;&#x5916;&#x7A7A;&#x95F4;&#x5145;&#x8DB3;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5C3D;&#x91CF;&#x589E;&#x5927;&#x6876;&#x7684;&#x6570;&#x91CF;</li>
+<li>&#x4F7F;&#x7528;&#x7684;&#x6620;&#x5C04;&#x51FD;&#x6570;&#x80FD;&#x591F;&#x5C06;&#x8F93;&#x5165;&#x7684; N &#x4E2A;&#x6570;&#x636E;&#x5747;&#x5300;&#x7684;&#x5206;&#x914D;&#x5230; K &#x4E2A;&#x6876;&#x4E2D;</li>
+</ol>
+<p>&#x540C;&#x65F6;&#xFF0C;&#x5BF9;&#x4E8E;&#x6876;&#x4E2D;&#x5143;&#x7D20;&#x7684;&#x6392;&#x5E8F;&#xFF0C;&#x9009;&#x62E9;&#x4F55;&#x79CD;&#x6BD4;&#x8F83;&#x6392;&#x5E8F;&#x7B97;&#x6CD5;&#x5BF9;&#x4E8E;&#x6027;&#x80FD;&#x7684;&#x5F71;&#x54CD;&#x81F3;&#x5173;&#x91CD;&#x8981;&#x3002;</p>
+<h2 id="1-&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x6700;&#x5FEB;">1. &#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x6700;&#x5FEB;</h2>
+<p>&#x5F53;&#x8F93;&#x5165;&#x7684;&#x6570;&#x636E;&#x53EF;&#x4EE5;&#x5747;&#x5300;&#x7684;&#x5206;&#x914D;&#x5230;&#x6BCF;&#x4E00;&#x4E2A;&#x6876;&#x4E2D;&#x3002;</p>
+<h2 id="2-&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x6700;&#x6162;">2. &#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x6700;&#x6162;</h2>
+<p>&#x5F53;&#x8F93;&#x5165;&#x7684;&#x6570;&#x636E;&#x88AB;&#x5206;&#x914D;&#x5230;&#x4E86;&#x540C;&#x4E00;&#x4E2A;&#x6876;&#x4E2D;&#x3002;</p>
+<h2 id="3-javascript-&#x4EE3;&#x7801;&#x5B9E;&#x73B0;">3. JavaScript &#x4EE3;&#x7801;&#x5B9E;&#x73B0;</h2>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">bucketSort</span>(<span class="hljs-params">arr, bucketSize</span>) </span>{
+    <span class="hljs-keyword">if</span> (arr.length === <span class="hljs-number">0</span>) {
+      <span class="hljs-keyword">return</span> arr;
+    }
+
+    <span class="hljs-keyword">var</span> i;
+    <span class="hljs-keyword">var</span> minValue = arr[<span class="hljs-number">0</span>];
+    <span class="hljs-keyword">var</span> maxValue = arr[<span class="hljs-number">0</span>];
+    <span class="hljs-keyword">for</span> (i = <span class="hljs-number">1</span>; i &lt; arr.length; i++) {
+      <span class="hljs-keyword">if</span> (arr[i] &lt; minValue) {
+          minValue = arr[i];                <span class="hljs-comment">// &#x8F93;&#x5165;&#x6570;&#x636E;&#x7684;&#x6700;&#x5C0F;&#x503C;</span>
+      } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (arr[i] &gt; maxValue) {
+          maxValue = arr[i];                <span class="hljs-comment">// &#x8F93;&#x5165;&#x6570;&#x636E;&#x7684;&#x6700;&#x5927;&#x503C;</span>
+      }
+    }
+
+    <span class="hljs-comment">//&#x6876;&#x7684;&#x521D;&#x59CB;&#x5316;</span>
+    <span class="hljs-keyword">var</span> DEFAULT_BUCKET_SIZE = <span class="hljs-number">5</span>;            <span class="hljs-comment">// &#x8BBE;&#x7F6E;&#x6876;&#x7684;&#x9ED8;&#x8BA4;&#x6570;&#x91CF;&#x4E3A;5</span>
+    bucketSize = bucketSize || DEFAULT_BUCKET_SIZE;
+    <span class="hljs-keyword">var</span> bucketCount = <span class="hljs-built_in">Math</span>.floor((maxValue - minValue) / bucketSize) + <span class="hljs-number">1</span>;   
+    <span class="hljs-keyword">var</span> buckets = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Array</span>(bucketCount);
+    <span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; buckets.length; i++) {
+        buckets[i] = [];
+    }
+
+    <span class="hljs-comment">//&#x5229;&#x7528;&#x6620;&#x5C04;&#x51FD;&#x6570;&#x5C06;&#x6570;&#x636E;&#x5206;&#x914D;&#x5230;&#x5404;&#x4E2A;&#x6876;&#x4E2D;</span>
+    <span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; arr.length; i++) {
+        buckets[<span class="hljs-built_in">Math</span>.floor((arr[i] - minValue) / bucketSize)].push(arr[i]);
+    }
+
+    arr.length = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; buckets.length; i++) {
+        insertionSort(buckets[i]);                      <span class="hljs-comment">// &#x5BF9;&#x6BCF;&#x4E2A;&#x6876;&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#xFF0C;&#x8FD9;&#x91CC;&#x4F7F;&#x7528;&#x4E86;&#x63D2;&#x5165;&#x6392;&#x5E8F;</span>
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> j = <span class="hljs-number">0</span>; j &lt; buckets[i].length; j++) {
+            arr.push(buckets[i][j]);                      
+        }
+    }
+
+    <span class="hljs-keyword">return</span> arr;
+}
+</code></pre>
+<h2 id="4-java-&#x4EE3;&#x7801;&#x5B9E;&#x73B0;">4. Java &#x4EE3;&#x7801;&#x5B9E;&#x73B0;</h2>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">BucketSort</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">IArraySort</span> </span>{
+
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> InsertSort insertSort = <span class="hljs-keyword">new</span> InsertSort();
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span>[] sort(<span class="hljs-keyword">int</span>[] sourceArray) <span class="hljs-keyword">throws</span> Exception {
+        <span class="hljs-comment">// &#x5BF9; arr &#x8FDB;&#x884C;&#x62F7;&#x8D1D;&#xFF0C;&#x4E0D;&#x6539;&#x53D8;&#x53C2;&#x6570;&#x5185;&#x5BB9;</span>
+        <span class="hljs-keyword">int</span>[] arr = Arrays.copyOf(sourceArray, sourceArray.length);
+
+        <span class="hljs-keyword">return</span> bucketSort(arr, <span class="hljs-number">5</span>);
+    }
+
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span>[] bucketSort(<span class="hljs-keyword">int</span>[] arr, <span class="hljs-keyword">int</span> bucketSize) <span class="hljs-keyword">throws</span> Exception {
+        <span class="hljs-keyword">if</span> (arr.length == <span class="hljs-number">0</span>) {
+            <span class="hljs-keyword">return</span> arr;
+        }
+
+        <span class="hljs-keyword">int</span> minValue = arr[<span class="hljs-number">0</span>];
+        <span class="hljs-keyword">int</span> maxValue = arr[<span class="hljs-number">0</span>];
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> value : arr) {
+            <span class="hljs-keyword">if</span> (value &lt; minValue) {
+                minValue = value;
+            } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (value &gt; maxValue) {
+                maxValue = value;
+            }
+        }
+
+        <span class="hljs-keyword">int</span> bucketCount = (<span class="hljs-keyword">int</span>) Math.floor((maxValue - minValue) / bucketSize) + <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">int</span>[][] buckets = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[bucketCount][<span class="hljs-number">0</span>];
+
+        <span class="hljs-comment">// &#x5229;&#x7528;&#x6620;&#x5C04;&#x51FD;&#x6570;&#x5C06;&#x6570;&#x636E;&#x5206;&#x914D;&#x5230;&#x5404;&#x4E2A;&#x6876;&#x4E2D;</span>
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; arr.length; i++) {
+            <span class="hljs-keyword">int</span> index = (<span class="hljs-keyword">int</span>) Math.floor((arr[i] - minValue) / bucketSize);
+            buckets[index] = arrAppend(buckets[index], arr[i]);
+        }
+
+        <span class="hljs-keyword">int</span> arrIndex = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span>[] bucket : buckets) {
+            <span class="hljs-keyword">if</span> (bucket.length &lt;= <span class="hljs-number">0</span>) {
+                <span class="hljs-keyword">continue</span>;
+            }
+            <span class="hljs-comment">// &#x5BF9;&#x6BCF;&#x4E2A;&#x6876;&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#xFF0C;&#x8FD9;&#x91CC;&#x4F7F;&#x7528;&#x4E86;&#x63D2;&#x5165;&#x6392;&#x5E8F;</span>
+            bucket = insertSort.sort(bucket);
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> value : bucket) {
+                arr[arrIndex++] = value;
+            }
+        }
+
+        <span class="hljs-keyword">return</span> arr;
+    }
+
+    <span class="hljs-comment">/**
+     * &#x81EA;&#x52A8;&#x6269;&#x5BB9;&#xFF0C;&#x5E76;&#x4FDD;&#x5B58;&#x6570;&#x636E;
+     *
+     * <span class="hljs-doctag">@param</span> arr
+     * <span class="hljs-doctag">@param</span> value
+     */</span>
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span>[] arrAppend(<span class="hljs-keyword">int</span>[] arr, <span class="hljs-keyword">int</span> value) {
+        arr = Arrays.copyOf(arr, arr.length + <span class="hljs-number">1</span>);
+        arr[arr.length - <span class="hljs-number">1</span>] = value;
+        <span class="hljs-keyword">return</span> arr;
+    }
+
+}
+</code></pre>
+<h2 id="5-php-&#x4EE3;&#x7801;&#x5B9E;&#x73B0;">5. PHP &#x4EE3;&#x7801;&#x5B9E;&#x73B0;</h2>
+<pre><code class="lang-php"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">bucketSort</span><span class="hljs-params">($arr, $bucketSize = <span class="hljs-number">5</span>)</span>
+</span>{
+    <span class="hljs-keyword">if</span> (count($arr) === <span class="hljs-number">0</span>) {
+      <span class="hljs-keyword">return</span> $arr;
+    }
+
+    $minValue = $arr[<span class="hljs-number">0</span>];
+    $maxValue = $arr[<span class="hljs-number">0</span>];
+    <span class="hljs-keyword">for</span> ($i = <span class="hljs-number">1</span>; $i &lt; count($arr); $i++) {
+      <span class="hljs-keyword">if</span> ($arr[$i] &lt; $minValue) {
+          $minValue = $arr[$i];
+      } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ($arr[$i] &gt; $maxValue) {
+          $maxValue = $arr[$i];
+      }
+    }
+
+    $bucketCount = floor(($maxValue - $minValue) / $bucketSize) + <span class="hljs-number">1</span>;
+    $buckets = <span class="hljs-keyword">array</span>();
+    <span class="hljs-keyword">for</span> ($i = <span class="hljs-number">0</span>; $i &lt; count($buckets); $i++) {
+        $buckets[$i] = [];
+    }
+
+    <span class="hljs-keyword">for</span> ($i = <span class="hljs-number">0</span>; $i &lt; count($arr); $i++) {
+        $buckets[floor(($arr[$i] - $minValue) / $bucketSize)][] = $arr[$i];
+    }
+
+    $arr = <span class="hljs-keyword">array</span>();
+    <span class="hljs-keyword">for</span> ($i = <span class="hljs-number">0</span>; $i &lt; count($buckets); $i++) {
+        $bucketTmp = $buckets[$i];
+        sort($bucketTmp);
+        <span class="hljs-keyword">for</span> ($j = <span class="hljs-number">0</span>; $j &lt; count($bucketTmp); $j++) {
+            $arr[] = $bucketTmp[$j];
+        }
+    }
+
+    <span class="hljs-keyword">return</span> $arr;
+}
+</code></pre>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; &#x5D14;&#x5B89;&#x5175; 2019 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2019-10-09 09:23:44
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="8.countingSort.html" class="navigation navigation-prev " aria-label="Previous page: 计数排序">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="10.radixSort.html" class="navigation navigation-next " aria-label="Next page: 基数排序">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"桶排序","level":"1.10","depth":1,"next":{"title":"基数排序","level":"1.11","depth":1,"path":"10.radixSort.md","ref":"10.radixSort.md","articles":[]},"previous":{"title":"计数排序","level":"1.9","depth":1,"path":"8.countingSort.md","ref":"8.countingSort.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","-lunr","-search","search-plus","splitter","page-toc-button","flexible-alerts","katex","tbfed-pagefooter"],"styles":{"website":"./res/mystyle.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy 崔安兵 2019","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"splitter":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"page-toc-button":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"崔安兵","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"排序算法","gitbook":"*"},"file":{"path":"9.bucketSort.md","mtime":"2019-10-09T01:23:44.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-25T10:22:54.457Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

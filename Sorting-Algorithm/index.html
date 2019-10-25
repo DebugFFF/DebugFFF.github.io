@@ -1,0 +1,419 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Introduction · 排序算法</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="崔安兵">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-page-toc-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="res/mystyle.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="1.bubbleSort.html" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter active" data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="1.bubbleSort.html">
+            
+                <a href="1.bubbleSort.html">
+            
+                    
+                    冒泡排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="2.selectionSort.html">
+            
+                <a href="2.selectionSort.html">
+            
+                    
+                    选择排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="3.insertionSort.html">
+            
+                <a href="3.insertionSort.html">
+            
+                    
+                    插入排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="4.shellSort.html">
+            
+                <a href="4.shellSort.html">
+            
+                    
+                    希尔排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="5.mergeSort.html">
+            
+                <a href="5.mergeSort.html">
+            
+                    
+                    归并排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="6.quickSort.html">
+            
+                <a href="6.quickSort.html">
+            
+                    
+                    快速排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="7.heapSort.html">
+            
+                <a href="7.heapSort.html">
+            
+                    
+                    堆排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="8.countingSort.html">
+            
+                <a href="8.countingSort.html">
+            
+                    
+                    计数排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="9.bucketSort.html">
+            
+                <a href="9.bucketSort.html">
+            
+                    
+                    桶排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="10.radixSort.html">
+            
+                <a href="10.radixSort.html">
+            
+                    
+                    基数排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Introduction</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x5341;&#x5927;&#x7ECF;&#x5178;&#x6392;&#x5E8F;&#x7B97;&#x6CD5;">&#x5341;&#x5927;&#x7ECF;&#x5178;&#x6392;&#x5E8F;&#x7B97;&#x6CD5;</h1>
+<p>&#x6392;&#x5E8F;&#x7B97;&#x6CD5;&#x662F;&#x300A;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x4E0E;&#x7B97;&#x6CD5;&#x300B;&#x4E2D;&#x6700;&#x57FA;&#x672C;&#x7684;&#x7B97;&#x6CD5;&#x4E4B;&#x4E00;&#x3002;</p>
+<p>&#x6392;&#x5E8F;&#x7B97;&#x6CD5;&#x53EF;&#x4EE5;&#x5206;&#x4E3A;&#x5185;&#x90E8;&#x6392;&#x5E8F;&#x548C;&#x5916;&#x90E8;&#x6392;&#x5E8F;&#xFF0C;&#x5185;&#x90E8;&#x6392;&#x5E8F;&#x662F;&#x6570;&#x636E;&#x8BB0;&#x5F55;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#xFF0C;&#x800C;&#x5916;&#x90E8;&#x6392;&#x5E8F;&#x662F;&#x56E0;&#x6392;&#x5E8F;&#x7684;&#x6570;&#x636E;&#x5F88;&#x5927;&#xFF0C;&#x4E00;&#x6B21;&#x4E0D;&#x80FD;&#x5BB9;&#x7EB3;&#x5168;&#x90E8;&#x7684;&#x6392;&#x5E8F;&#x8BB0;&#x5F55;&#xFF0C;&#x5728;&#x6392;&#x5E8F;&#x8FC7;&#x7A0B;&#x4E2D;&#x9700;&#x8981;&#x8BBF;&#x95EE;&#x5916;&#x5B58;&#x3002;&#x5E38;&#x89C1;&#x7684;&#x5185;&#x90E8;&#x6392;&#x5E8F;&#x7B97;&#x6CD5;&#x6709;&#xFF1A;<strong>&#x63D2;&#x5165;&#x6392;&#x5E8F;&#x3001;&#x5E0C;&#x5C14;&#x6392;&#x5E8F;&#x3001;&#x9009;&#x62E9;&#x6392;&#x5E8F;&#x3001;&#x5192;&#x6CE1;&#x6392;&#x5E8F;&#x3001;&#x5F52;&#x5E76;&#x6392;&#x5E8F;&#x3001;&#x5FEB;&#x901F;&#x6392;&#x5E8F;&#x3001;&#x5806;&#x6392;&#x5E8F;&#x3001;&#x57FA;&#x6570;&#x6392;&#x5E8F;</strong>&#x7B49;&#x3002;&#x7528;&#x4E00;&#x5F20;&#x56FE;&#x6982;&#x62EC;&#xFF1A;</p>
+<p><img src="res/sort.png" alt="&#x5341;&#x5927;&#x7ECF;&#x5178;&#x6392;&#x5E8F;&#x7B97;&#x6CD5; &#x6982;&#x89C8;&#x622A;&#x56FE;"></p>
+<p><strong>&#x5173;&#x4E8E;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;</strong>&#xFF1A;</p>
+<ol>
+<li>&#x5E73;&#x65B9;&#x9636; (O(n2)) &#x6392;&#x5E8F;
+ &#x5404;&#x7C7B;&#x7B80;&#x5355;&#x6392;&#x5E8F;&#xFF1A;&#x76F4;&#x63A5;&#x63D2;&#x5165;&#x3001;&#x76F4;&#x63A5;&#x9009;&#x62E9;&#x548C;&#x5192;&#x6CE1;&#x6392;&#x5E8F;&#x3002;</li>
+<li>&#x7EBF;&#x6027;&#x5BF9;&#x6570;&#x9636; (O(nlog2n)) &#x6392;&#x5E8F;
+ &#x5FEB;&#x901F;&#x6392;&#x5E8F;&#x3001;&#x5806;&#x6392;&#x5E8F;&#x548C;&#x5F52;&#x5E76;&#x6392;&#x5E8F;&#xFF1B;</li>
+<li>O(n1+&#xA7;)) &#x6392;&#x5E8F;&#xFF0C;&#xA7; &#x662F;&#x4ECB;&#x4E8E; 0 &#x548C; 1 &#x4E4B;&#x95F4;&#x7684;&#x5E38;&#x6570;&#x3002;
+ &#x5E0C;&#x5C14;&#x6392;&#x5E8F;</li>
+<li>&#x7EBF;&#x6027;&#x9636; (O(n)) &#x6392;&#x5E8F;
+ &#x57FA;&#x6570;&#x6392;&#x5E8F;&#xFF0C;&#x6B64;&#x5916;&#x8FD8;&#x6709;&#x6876;&#x3001;&#x7BB1;&#x6392;&#x5E8F;&#x3002;</li>
+</ol>
+<p><strong>&#x5173;&#x4E8E;&#x7A33;&#x5B9A;&#x6027;</strong>&#xFF1A;</p>
+<p>&#x7A33;&#x5B9A;&#x7684;&#x6392;&#x5E8F;&#x7B97;&#x6CD5;&#xFF1A;&#x5192;&#x6CE1;&#x6392;&#x5E8F;&#x3001;&#x63D2;&#x5165;&#x6392;&#x5E8F;&#x3001;&#x5F52;&#x5E76;&#x6392;&#x5E8F;&#x548C;&#x57FA;&#x6570;&#x6392;&#x5E8F;&#x3002;</p>
+<p>&#x4E0D;&#x662F;&#x7A33;&#x5B9A;&#x7684;&#x6392;&#x5E8F;&#x7B97;&#x6CD5;&#xFF1A;&#x9009;&#x62E9;&#x6392;&#x5E8F;&#x3001;&#x5FEB;&#x901F;&#x6392;&#x5E8F;&#x3001;&#x5E0C;&#x5C14;&#x6392;&#x5E8F;&#x3001;&#x5806;&#x6392;&#x5E8F;&#x3002;</p>
+<p><strong>&#x540D;&#x8BCD;&#x89E3;&#x91CA;</strong>&#xFF1A;</p>
+<p><strong>n</strong>&#xFF1A;&#x6570;&#x636E;&#x89C4;&#x6A21;</p>
+<p><strong>k</strong>&#xFF1A;&#x201C;&#x6876;&#x201D;&#x7684;&#x4E2A;&#x6570;</p>
+<p><strong>In-place</strong>&#xFF1A;&#x5360;&#x7528;&#x5E38;&#x6570;&#x5185;&#x5B58;&#xFF0C;&#x4E0D;&#x5360;&#x7528;&#x989D;&#x5916;&#x5185;&#x5B58;</p>
+<p><strong>Out-place</strong>&#xFF1A;&#x5360;&#x7528;&#x989D;&#x5916;&#x5185;&#x5B58;</p>
+<p><strong>&#x7A33;&#x5B9A;&#x6027;</strong>&#xFF1A;&#x6392;&#x5E8F;&#x540E; 2 &#x4E2A;&#x76F8;&#x7B49;&#x952E;&#x503C;&#x7684;&#x987A;&#x5E8F;&#x548C;&#x6392;&#x5E8F;&#x4E4B;&#x524D;&#x5B83;&#x4EEC;&#x7684;&#x987A;&#x5E8F;&#x76F8;&#x540C;</p>
+<hr>
+<p><strong>GitBook &#x5185;&#x5BB9;&#x5927;&#x7EB2;</strong></p>
+<ol>
+<li><a href="1.bubbleSort.html">&#x5192;&#x6CE1;&#x6392;&#x5E8F;</a></li>
+<li><a href="2.selectionSort.html">&#x9009;&#x62E9;&#x6392;&#x5E8F;</a></li>
+<li><a href="3.insertionSort.html">&#x63D2;&#x5165;&#x6392;&#x5E8F;</a></li>
+<li><a href="4.shellSort.html">&#x5E0C;&#x5C14;&#x6392;&#x5E8F;</a></li>
+<li><a href="5.mergeSort.html">&#x5F52;&#x5E76;&#x6392;&#x5E8F;</a></li>
+<li><a href="6.quickSort.html">&#x5FEB;&#x901F;&#x6392;&#x5E8F;</a></li>
+<li><a href="7.heapSort.html">&#x5806;&#x6392;&#x5E8F;</a></li>
+<li><a href="8.countingSort.html">&#x8BA1;&#x6570;&#x6392;&#x5E8F;</a></li>
+<li><a href="9.bucketSort.html">&#x6876;&#x6392;&#x5E8F;</a></li>
+<li><a href="10.radixSort.html">&#x57FA;&#x6570;&#x6392;&#x5E8F;</a></li>
+</ol>
+<hr>
+<p>&#x672C;&#x4E66;&#x5185;&#x5BB9;&#x51E0;&#x4E4E;&#x5B8C;&#x5168;&#x6765;&#x6E90;&#x4E8E;&#x7F51;&#x7EDC;&#x3002;</p>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; &#x5D14;&#x5B89;&#x5175; 2019 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2019-10-25 16:29:53
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="1.bubbleSort.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 冒泡排序">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Introduction","level":"1.1","depth":1,"next":{"title":"冒泡排序","level":"1.2","depth":1,"path":"1.bubbleSort.md","ref":"1.bubbleSort.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","-lunr","-search","search-plus","splitter","page-toc-button","flexible-alerts","katex","tbfed-pagefooter"],"styles":{"website":"./res/mystyle.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy 崔安兵 2019","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"splitter":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"page-toc-button":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"崔安兵","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"排序算法","gitbook":"*"},"file":{"path":"README.md","mtime":"2019-10-25T08:29:53.201Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-25T10:22:54.457Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

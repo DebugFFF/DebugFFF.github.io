@@ -1,0 +1,623 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>堆排序 · 排序算法</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="崔安兵">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-page-toc-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="res/mystyle.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="8.countingSort.html" />
+    
+    
+    <link rel="prev" href="6.quickSort.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="1.bubbleSort.html">
+            
+                <a href="1.bubbleSort.html">
+            
+                    
+                    冒泡排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="2.selectionSort.html">
+            
+                <a href="2.selectionSort.html">
+            
+                    
+                    选择排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="3.insertionSort.html">
+            
+                <a href="3.insertionSort.html">
+            
+                    
+                    插入排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="4.shellSort.html">
+            
+                <a href="4.shellSort.html">
+            
+                    
+                    希尔排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="5.mergeSort.html">
+            
+                <a href="5.mergeSort.html">
+            
+                    
+                    归并排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="6.quickSort.html">
+            
+                <a href="6.quickSort.html">
+            
+                    
+                    快速排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8" data-path="7.heapSort.html">
+            
+                <a href="7.heapSort.html">
+            
+                    
+                    堆排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="8.countingSort.html">
+            
+                <a href="8.countingSort.html">
+            
+                    
+                    计数排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="9.bucketSort.html">
+            
+                <a href="9.bucketSort.html">
+            
+                    
+                    桶排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="10.radixSort.html">
+            
+                <a href="10.radixSort.html">
+            
+                    
+                    基数排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >堆排序</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x5806;&#x6392;&#x5E8F;">&#x5806;&#x6392;&#x5E8F;</h1>
+<p>&#x5806;&#x6392;&#x5E8F;&#xFF08;Heapsort&#xFF09;&#x662F;&#x6307;&#x5229;&#x7528;&#x5806;&#x8FD9;&#x79CD;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x6240;&#x8BBE;&#x8BA1;&#x7684;&#x4E00;&#x79CD;&#x6392;&#x5E8F;&#x7B97;&#x6CD5;&#x3002;&#x5806;&#x79EF;&#x662F;&#x4E00;&#x4E2A;&#x8FD1;&#x4F3C;&#x5B8C;&#x5168;&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x7ED3;&#x6784;&#xFF0C;&#x5E76;&#x540C;&#x65F6;&#x6EE1;&#x8DB3;&#x5806;&#x79EF;&#x7684;&#x6027;&#x8D28;&#xFF1A;&#x5373;&#x5B50;&#x7ED3;&#x70B9;&#x7684;&#x952E;&#x503C;&#x6216;&#x7D22;&#x5F15;&#x603B;&#x662F;&#x5C0F;&#x4E8E;&#xFF08;&#x6216;&#x8005;&#x5927;&#x4E8E;&#xFF09;&#x5B83;&#x7684;&#x7236;&#x8282;&#x70B9;&#x3002;&#x5806;&#x6392;&#x5E8F;&#x53EF;&#x4EE5;&#x8BF4;&#x662F;&#x4E00;&#x79CD;&#x5229;&#x7528;&#x5806;&#x7684;&#x6982;&#x5FF5;&#x6765;&#x6392;&#x5E8F;&#x7684;&#x9009;&#x62E9;&#x6392;&#x5E8F;&#x3002;&#x5206;&#x4E3A;&#x4E24;&#x79CD;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<ol>
+<li>&#x5927;&#x9876;&#x5806;&#xFF1A;&#x6BCF;&#x4E2A;&#x8282;&#x70B9;&#x7684;&#x503C;&#x90FD;&#x5927;&#x4E8E;&#x6216;&#x7B49;&#x4E8E;&#x5176;&#x5B50;&#x8282;&#x70B9;&#x7684;&#x503C;&#xFF0C;&#x5728;&#x5806;&#x6392;&#x5E8F;&#x7B97;&#x6CD5;&#x4E2D;&#x7528;&#x4E8E;&#x5347;&#x5E8F;&#x6392;&#x5217;&#xFF1B;</li>
+<li>&#x5C0F;&#x9876;&#x5806;&#xFF1A;&#x6BCF;&#x4E2A;&#x8282;&#x70B9;&#x7684;&#x503C;&#x90FD;&#x5C0F;&#x4E8E;&#x6216;&#x7B49;&#x4E8E;&#x5176;&#x5B50;&#x8282;&#x70B9;&#x7684;&#x503C;&#xFF0C;&#x5728;&#x5806;&#x6392;&#x5E8F;&#x7B97;&#x6CD5;&#x4E2D;&#x7528;&#x4E8E;&#x964D;&#x5E8F;&#x6392;&#x5217;&#xFF1B;</li>
+</ol>
+<p>&#x5806;&#x6392;&#x5E8F;&#x7684;&#x5E73;&#x5747;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A; &#x39F;(nlogn)&#x3002;</p>
+<h2 id="1-&#x7B97;&#x6CD5;&#x6B65;&#x9AA4;">1. &#x7B97;&#x6CD5;&#x6B65;&#x9AA4;</h2>
+<ol>
+<li><p>&#x5C06;&#x5F85;&#x6392;&#x5E8F;&#x5E8F;&#x5217;&#x6784;&#x5EFA;&#x6210;&#x4E00;&#x4E2A;&#x5806; H[0&#x2026;&#x2026;n-1]&#xFF0C;&#x6839;&#x636E;&#xFF08;&#x5347;&#x5E8F;&#x964D;&#x5E8F;&#x9700;&#x6C42;&#xFF09;&#x9009;&#x62E9;&#x5927;&#x9876;&#x5806;&#x6216;&#x5C0F;&#x9876;&#x5806;&#xFF1B;</p>
+</li>
+<li><p>&#x628A;&#x5806;&#x9996;&#xFF08;&#x6700;&#x5927;&#x503C;&#xFF09;&#x548C;&#x5806;&#x5C3E;&#x4E92;&#x6362;&#xFF1B;</p>
+</li>
+<li><p>&#x628A;&#x5806;&#x7684;&#x5C3A;&#x5BF8;&#x7F29;&#x5C0F; 1&#xFF0C;&#x5E76;&#x8C03;&#x7528; shift_down(0)&#xFF0C;&#x76EE;&#x7684;&#x662F;&#x628A;&#x65B0;&#x7684;&#x6570;&#x7EC4;&#x9876;&#x7AEF;&#x6570;&#x636E;&#x8C03;&#x6574;&#x5230;&#x76F8;&#x5E94;&#x4F4D;&#x7F6E;&#xFF1B;</p>
+</li>
+<li><p>&#x91CD;&#x590D;&#x6B65;&#x9AA4; 2&#xFF0C;&#x76F4;&#x5230;&#x5806;&#x7684;&#x5C3A;&#x5BF8;&#x4E3A; 1&#x3002;</p>
+</li>
+</ol>
+<h2 id="2-&#x52A8;&#x56FE;&#x6F14;&#x793A;">2. &#x52A8;&#x56FE;&#x6F14;&#x793A;</h2>
+<p><img src="res/heapSort.gif" alt="&#x52A8;&#x56FE;&#x6F14;&#x793A;"></p>
+<h2 id="3-javascript-&#x4EE3;&#x7801;&#x5B9E;&#x73B0;">3. JavaScript &#x4EE3;&#x7801;&#x5B9E;&#x73B0;</h2>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> len;    <span class="hljs-comment">// &#x56E0;&#x4E3A;&#x58F0;&#x660E;&#x7684;&#x591A;&#x4E2A;&#x51FD;&#x6570;&#x90FD;&#x9700;&#x8981;&#x6570;&#x636E;&#x957F;&#x5EA6;&#xFF0C;&#x6240;&#x4EE5;&#x628A;len&#x8BBE;&#x7F6E;&#x6210;&#x4E3A;&#x5168;&#x5C40;&#x53D8;&#x91CF;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">buildMaxHeap</span>(<span class="hljs-params">arr</span>) </span>{   <span class="hljs-comment">// &#x5EFA;&#x7ACB;&#x5927;&#x9876;&#x5806;</span>
+    len = arr.length;
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-built_in">Math</span>.floor(len/<span class="hljs-number">2</span>); i &gt;= <span class="hljs-number">0</span>; i--) {
+        heapify(arr, i);
+    }
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">heapify</span>(<span class="hljs-params">arr, i</span>) </span>{     <span class="hljs-comment">// &#x5806;&#x8C03;&#x6574;</span>
+    <span class="hljs-keyword">var</span> left = <span class="hljs-number">2</span> * i + <span class="hljs-number">1</span>,
+        right = <span class="hljs-number">2</span> * i + <span class="hljs-number">2</span>,
+        largest = i;
+
+    <span class="hljs-keyword">if</span> (left &lt; len &amp;&amp; arr[left] &gt; arr[largest]) {
+        largest = left;
+    }
+
+    <span class="hljs-keyword">if</span> (right &lt; len &amp;&amp; arr[right] &gt; arr[largest]) {
+        largest = right;
+    }
+
+    <span class="hljs-keyword">if</span> (largest != i) {
+        swap(arr, i, largest);
+        heapify(arr, largest);
+    }
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">swap</span>(<span class="hljs-params">arr, i, j</span>) </span>{
+    <span class="hljs-keyword">var</span> temp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = temp;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">heapSort</span>(<span class="hljs-params">arr</span>) </span>{
+    buildMaxHeap(arr);
+
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = arr.length<span class="hljs-number">-1</span>; i &gt; <span class="hljs-number">0</span>; i--) {
+        swap(arr, <span class="hljs-number">0</span>, i);
+        len--;
+        heapify(arr, <span class="hljs-number">0</span>);
+    }
+    <span class="hljs-keyword">return</span> arr;
+}
+</code></pre>
+<h2 id="4-python-&#x4EE3;&#x7801;&#x5B9E;&#x73B0;">4. Python &#x4EE3;&#x7801;&#x5B9E;&#x73B0;</h2>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">buildMaxHeap</span><span class="hljs-params">(arr)</span>:</span>
+    <span class="hljs-keyword">import</span> math
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(math.floor(len(arr)/<span class="hljs-number">2</span>),<span class="hljs-number">-1</span>,<span class="hljs-number">-1</span>):
+        heapify(arr,i)
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">heapify</span><span class="hljs-params">(arr, i)</span>:</span>
+    left = <span class="hljs-number">2</span>*i+<span class="hljs-number">1</span>
+    right = <span class="hljs-number">2</span>*i+<span class="hljs-number">2</span>
+    largest = i
+    <span class="hljs-keyword">if</span> left &lt; arrLen <span class="hljs-keyword">and</span> arr[left] &gt; arr[largest]:
+        largest = left
+    <span class="hljs-keyword">if</span> right &lt; arrLen <span class="hljs-keyword">and</span> arr[right] &gt; arr[largest]:
+        largest = right
+
+    <span class="hljs-keyword">if</span> largest != i:
+        swap(arr, i, largest)
+        heapify(arr, largest)
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">swap</span><span class="hljs-params">(arr, i, j)</span>:</span>
+    arr[i], arr[j] = arr[j], arr[i]
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">heapSort</span><span class="hljs-params">(arr)</span>:</span>
+    <span class="hljs-keyword">global</span> arrLen
+    arrLen = len(arr)
+    buildMaxHeap(arr)
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(arr)<span class="hljs-number">-1</span>,<span class="hljs-number">0</span>,<span class="hljs-number">-1</span>):
+        swap(arr,<span class="hljs-number">0</span>,i)
+        arrLen -=<span class="hljs-number">1</span>
+        heapify(arr, <span class="hljs-number">0</span>)
+    <span class="hljs-keyword">return</span> arr
+</code></pre>
+<h2 id="5-go-&#x4EE3;&#x7801;&#x5B9E;&#x73B0;">5. Go &#x4EE3;&#x7801;&#x5B9E;&#x73B0;</h2>
+<pre><code class="lang-go"><span class="hljs-keyword">func</span> heapSort(arr []<span class="hljs-keyword">int</span>) []<span class="hljs-keyword">int</span> {
+    arrLen := <span class="hljs-built_in">len</span>(arr)
+    buildMaxHeap(arr, arrLen)
+    <span class="hljs-keyword">for</span> i := arrLen - <span class="hljs-number">1</span>; i &gt;= <span class="hljs-number">0</span>; i-- {
+        swap(arr, <span class="hljs-number">0</span>, i)
+        arrLen -= <span class="hljs-number">1</span>
+        heapify(arr, <span class="hljs-number">0</span>, arrLen)
+    }
+    <span class="hljs-keyword">return</span> arr
+}
+
+<span class="hljs-keyword">func</span> buildMaxHeap(arr []<span class="hljs-keyword">int</span>, arrLen <span class="hljs-keyword">int</span>) {
+    <span class="hljs-keyword">for</span> i := arrLen / <span class="hljs-number">2</span>; i &gt;= <span class="hljs-number">0</span>; i-- {
+        heapify(arr, i, arrLen)
+    }
+}
+
+<span class="hljs-keyword">func</span> heapify(arr []<span class="hljs-keyword">int</span>, i, arrLen <span class="hljs-keyword">int</span>) {
+    left := <span class="hljs-number">2</span>*i + <span class="hljs-number">1</span>
+    right := <span class="hljs-number">2</span>*i + <span class="hljs-number">2</span>
+    largest := i
+    <span class="hljs-keyword">if</span> left &lt; arrLen &amp;&amp; arr[left] &gt; arr[largest] {
+        largest = left
+    }
+    <span class="hljs-keyword">if</span> right &lt; arrLen &amp;&amp; arr[right] &gt; arr[largest] {
+        largest = right
+    }
+    <span class="hljs-keyword">if</span> largest != i {
+        swap(arr, i, largest)
+        heapify(arr, largest, arrLen)
+    }
+}
+
+<span class="hljs-keyword">func</span> swap(arr []<span class="hljs-keyword">int</span>, i, j <span class="hljs-keyword">int</span>) {
+    arr[i], arr[j] = arr[j], arr[i]
+}
+</code></pre>
+<h2 id="6-java-&#x4EE3;&#x7801;&#x5B9E;&#x73B0;">6. Java &#x4EE3;&#x7801;&#x5B9E;&#x73B0;</h2>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HeapSort</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">IArraySort</span> </span>{
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span>[] sort(<span class="hljs-keyword">int</span>[] sourceArray) <span class="hljs-keyword">throws</span> Exception {
+        <span class="hljs-comment">// &#x5BF9; arr &#x8FDB;&#x884C;&#x62F7;&#x8D1D;&#xFF0C;&#x4E0D;&#x6539;&#x53D8;&#x53C2;&#x6570;&#x5185;&#x5BB9;</span>
+        <span class="hljs-keyword">int</span>[] arr = Arrays.copyOf(sourceArray, sourceArray.length);
+
+        <span class="hljs-keyword">int</span> len = arr.length;
+
+        buildMaxHeap(arr, len);
+
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = len - <span class="hljs-number">1</span>; i &gt; <span class="hljs-number">0</span>; i--) {
+            swap(arr, <span class="hljs-number">0</span>, i);
+            len--;
+            heapify(arr, <span class="hljs-number">0</span>, len);
+        }
+        <span class="hljs-keyword">return</span> arr;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">buildMaxHeap</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] arr, <span class="hljs-keyword">int</span> len)</span> </span>{
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = (<span class="hljs-keyword">int</span>) Math.floor(len / <span class="hljs-number">2</span>); i &gt;= <span class="hljs-number">0</span>; i--) {
+            heapify(arr, i, len);
+        }
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">heapify</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] arr, <span class="hljs-keyword">int</span> i, <span class="hljs-keyword">int</span> len)</span> </span>{
+        <span class="hljs-keyword">int</span> left = <span class="hljs-number">2</span> * i + <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">int</span> right = <span class="hljs-number">2</span> * i + <span class="hljs-number">2</span>;
+        <span class="hljs-keyword">int</span> largest = i;
+
+        <span class="hljs-keyword">if</span> (left &lt; len &amp;&amp; arr[left] &gt; arr[largest]) {
+            largest = left;
+        }
+
+        <span class="hljs-keyword">if</span> (right &lt; len &amp;&amp; arr[right] &gt; arr[largest]) {
+            largest = right;
+        }
+
+        <span class="hljs-keyword">if</span> (largest != i) {
+            swap(arr, i, largest);
+            heapify(arr, largest, len);
+        }
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">swap</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] arr, <span class="hljs-keyword">int</span> i, <span class="hljs-keyword">int</span> j)</span> </span>{
+        <span class="hljs-keyword">int</span> temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+
+}
+</code></pre>
+<h2 id="7-php-&#x4EE3;&#x7801;&#x5B9E;&#x73B0;">7. PHP &#x4EE3;&#x7801;&#x5B9E;&#x73B0;</h2>
+<pre><code class="lang-php"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">buildMaxHeap</span><span class="hljs-params">(&amp;$arr)</span>
+</span>{
+    <span class="hljs-keyword">global</span> $len;
+    <span class="hljs-keyword">for</span> ($i = floor($len/<span class="hljs-number">2</span>); $i &gt;= <span class="hljs-number">0</span>; $i--) {
+        heapify($arr, $i);
+    }
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">heapify</span><span class="hljs-params">(&amp;$arr, $i)</span>
+</span>{
+    <span class="hljs-keyword">global</span> $len;
+    $left = <span class="hljs-number">2</span> * $i + <span class="hljs-number">1</span>;
+    $right = <span class="hljs-number">2</span> * $i + <span class="hljs-number">2</span>;
+    $largest = $i;
+
+    <span class="hljs-keyword">if</span> ($left &lt; $len &amp;&amp; $arr[$left] &gt; $arr[$largest]) {
+        $largest = $left;
+    }
+
+    <span class="hljs-keyword">if</span> ($right &lt; $len &amp;&amp; $arr[$right] &gt; $arr[$largest]) {
+        $largest = $right;
+    }
+
+    <span class="hljs-keyword">if</span> ($largest != $i) {
+        swap($arr, $i, $largest);
+        heapify($arr, $largest);
+    }
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">swap</span><span class="hljs-params">(&amp;$arr, $i, $j)</span>
+</span>{
+    $temp = $arr[$i];
+    $arr[$i] = $arr[$j];
+    $arr[$j] = $temp;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">heapSort</span><span class="hljs-params">($arr)</span> </span>{
+    <span class="hljs-keyword">global</span> $len;
+    $len = count($arr);
+    buildMaxHeap($arr);
+    <span class="hljs-keyword">for</span> ($i = count($arr) - <span class="hljs-number">1</span>; $i &gt; <span class="hljs-number">0</span>; $i--) {
+        swap($arr, <span class="hljs-number">0</span>, $i);
+        $len--;
+        heapify($arr, <span class="hljs-number">0</span>);
+    }
+    <span class="hljs-keyword">return</span> $arr;
+}
+</code></pre>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; &#x5D14;&#x5B89;&#x5175; 2019 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2019-10-25 17:24:35
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="6.quickSort.html" class="navigation navigation-prev " aria-label="Previous page: 快速排序">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="8.countingSort.html" class="navigation navigation-next " aria-label="Next page: 计数排序">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"堆排序","level":"1.8","depth":1,"next":{"title":"计数排序","level":"1.9","depth":1,"path":"8.countingSort.md","ref":"8.countingSort.md","articles":[]},"previous":{"title":"快速排序","level":"1.7","depth":1,"path":"6.quickSort.md","ref":"6.quickSort.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","-lunr","-search","search-plus","splitter","page-toc-button","flexible-alerts","katex","tbfed-pagefooter"],"styles":{"website":"./res/mystyle.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy 崔安兵 2019","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"splitter":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"page-toc-button":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"崔安兵","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"排序算法","gitbook":"*"},"file":{"path":"7.heapSort.md","mtime":"2019-10-25T09:24:35.343Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-25T10:22:54.457Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
