@@ -12,8 +12,6 @@ int fgetc ( FILE * stream );
 //
 int fputc ( int character, FILE * stream );
 //
-exit()
-//
 int fclose(FILE * stream);
 //
 int fprintf ( FILE * stream, const char * format, ... );
@@ -52,8 +50,48 @@ size_t fwrite ( const void * ptr, size_t size, size_t count, FILE * stream );
 | 标识 | 说明                                                         |
 | ---- | ------------------------------------------------------------ |
 | "r"  | 读取：打开文件进行输入操作。文件必须存在。                   |
-| "w"  | 写：创建一个空文件用于输出操作。如果已经存在同名文件，则将其内容丢弃，并将该文件视为新的空文件。 |
+| "w"  | 写：创建一个空文件用于输出操作。如果已经存在同名文件，则将其内容丢弃，并将该文件视为**新的空文件**。 |
 | "a"  | 追加：打开文件以在文件末尾输出。输出操作始终将数据写入文件的末尾，然后进行扩展。重新定位操作（fseek，fsetpos，rewind）将被忽略。如果文件不存在，则创建该文件。 |
 | "r+" | 读取/更新：打开文件进行更新（用于输入和输出）。该文件必须存在。 |
-| "w+" | 写入/更新：创建一个空文件并打开以进行更新（用于输入和输出）。如果同名文件已经存在，则将其内容丢弃，并将该文件视为新的空文件。 |
+| "w+" | 写入/更新：创建一个**空文件**并打开以进行更新（用于输入和输出）。如果同名文件已经存在，则将其内容丢弃，并将该文件视为新的空文件。 |
 | "a+" | 追加/ 更新：打开文件进行更新（用于输入和输出），所有输出操作均在文件末尾写入数据。重新定位操作（fseek，fsetpos，rewind）会影响下一个输入操作，但输出操作会将位置移回文件末尾。如果文件不存在，则创建该文件。 |
+
+
+
+## 将结构体数据存入和读取
+
+### fwrite和fread
+
+>//ptr是读入文件数据的内存存储地址，size数据块大小，count数据块的数目，stream文件指针
+>`size_t fread ( void * ptr, size_t size, size_t count, FILE * stream );`  数据、大小、数量、指针
+>//ptr要写入的数据块，size数据块大小，count数据块的数目，stream文件指针
+>`size_t fwrite ( const void * ptr, size_t size, size_t count, FILE * stream );`
+
+```C
+typedef struct student
+{
+	char no[13];
+	char name[10];
+	char sex[4];
+}s[3],r[3];   //学生结构体
+void jianli(int n) 
+{
+	int i,a,b;FILE * pf;
+	if((pf=fopen("D:\\a.dat","a+"))==NULL) return ;
+	input(s);
+
+	for(i=0;i<3;i++)
+	{
+		fwrite(&s[i],sizeof(student),1,pf);
+	}
+
+	for(i=0;i<3;i++)
+	{
+		fread(&r[i],sizeof(student),1,pf);
+	}
+	fclose(pf);
+
+}
+```
+
+### sprintf和
